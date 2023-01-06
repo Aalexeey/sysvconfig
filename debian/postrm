@@ -1,0 +1,19 @@
+#!/bin/sh
+# $Id: postrm,v 1.1.1.1 2004/04/20 21:24:49 john Exp $
+
+# Postrm for sysvconfig by John Hasler 2004
+# Any possessor of a copy of this program may treat it as if it
+# were in the public domain.  I waive all rights.
+
+set -e
+
+if [ "$1" = "purge" ] ; then
+        rm -f /var/lib/sysvconfig/backup
+	rmdir /var/lib/sysvconfig >/dev/null 2>&1 || true
+	rm -f /usr/share/sysvconfig/guide
+	rmdir /usr/share/sysvconfig >/dev/null 2>&1 || true
+fi
+if [ -x /usr/bin/update-menus ] ; then
+        /usr/bin/update-menus
+fi
+exit 0

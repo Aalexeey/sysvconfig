@@ -1,0 +1,59 @@
+.\" Someone tell emacs that this is an -*- nroff -*- source file.
+.TH SYSVCONFIG 8 "Version .70" "Debian GNU/Linux"
+.SH NAME
+sysvconfig \- configure Sys V style init script links
+.SH SYNOPSIS
+.B sysvconfig
+[--version | -v] | [--help | -h] | [--enable | --disable service] [--listlinks] | [--restore] [--debug [directory]]
+.br
+.SH DESCRIPTION
+.PP
+.B sysvconfig
+is a
+.B dialog
+based interactive, menu driven utility to help automate setting up Sys V
+style init script links.
+Some feature of 
+.B sysvconfig 
+are:
+.br
+- Provides extensive explanations at each step.
+.br
+- Enable or disable services.
+.br
+- Edit individual links.
+.br
+- Restore from backup file if you make a mistake.
+.br
+- Menu or command line interface.
+.br
+- View all services, each with its status and a brief description.
+.PP
+You must be root to run this program unless you give it the '--debug' option.
+.SH FILES
+.B /usr/share/sysvconfig/guide
+contains brief descriptions of services.
+.br
+.B /var/lib/sysvconfig/backup
+contains a backup of your links as they were just before you 
+last ran 
+.B sysvconfig.
+.SH NOTES
+.B Does not show rcS.d links.  This is deliberate.
+.SH TO DO
+Finish guide file.
+.br
+Redesign data structures.
+.br
+Write a comprehensive man page.
+.SH BUGS
+Variable names are horrible.
+.SH "SEE ALSO"
+.B dialog(1), update-rc.d(8), init(8).
+.SH AUTHOR
+.B sysvconfig
+was written by John Hasler <jhasler@debian.org>.
+.SH COPYRIGHT
+This man page may be treated as if it were
+in the public domain.  I waive all rights.
+The sysvconfig program is licensed under the GPL.

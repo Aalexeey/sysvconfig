@@ -1,0 +1,13 @@
+#!/bin/sh
+# $Id: postinst,v 1.1.1.1 2004/04/20 21:24:28 john Exp $
+
+# Postinst for sysvconfig by John Hasler 2004
+# Any possessor of a copy of this program may treat it as if it
+# were in the public domain.  I waive all rights.
+
+set -e
+
+if [ -x /usr/bin/update-menus ] ; then
+    /usr/bin/update-menus
+fi
+exit 0

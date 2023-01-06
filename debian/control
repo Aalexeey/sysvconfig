@@ -1,0 +1,20 @@
+Source: sysvconfig
+Section: admin
+Priority: optional
+Maintainer: John Hasler <jhasler@debian.org>
+Standards-Version: 3.7.3.0
+Build-Depends: debhelper
+
+Package: sysvconfig
+Architecture: all
+Depends:  dialog, init-system-helpers, perl
+Description: A text menu based utility for configuring init script links
+ It provides extensive explanations at each step.
+ Some features supported by sysvconfig are:
+  - Enable or disable services.
+  - Edit init links.
+  - Restore from backup file if you make a mistake.
+  - Menu or command line interface.
+  - View all services, each with its status and a brief description.
+ Sysvconfig also installs a 'service' script much like that found on 
+ Red Hat systems.

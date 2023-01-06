@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Debian Sysv Config Utility
+Name=Утилита Sysv служб для Debian
+Comment=A text menu based utility for configuring sysvinit
+Comment[ru]=Текстовая утилита для конфигурации служб в sysvinit
+Exec=su-to-root -X -c "x-terminal-emulator -e /usr/sbin/sysvconfig"
+Icon=services
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Categories=System;Settings;

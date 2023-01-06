@@ -1,0 +1,4 @@
+usr/sbin
+var/lib/sysvconfig
+usr/share/sysvconfig
+

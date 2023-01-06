@@ -1,0 +1,3 @@
+?package(sysvconfig):needs="text" section="Applications/System/Administration"\
+  title="sysvconfig"\
+    command="/usr/bin/su-to-root -p root -c /usr/sbin/sysvconfig"

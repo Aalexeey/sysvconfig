@@ -1,0 +1,68 @@
+# $Id: guide,v 1.1.1.1 2004/04/20 20:42:15 john Exp $
+# sysvconfig guide file
+
+apache			Web server daemon
+apache-ssl		Web server daemon with SSL support
+argus			Network auditing daemon
+atd			Daemon to run jobs queued by at
+bootmisc.sh		Miscellaneous things to be done during bootup
+checkfs.sh		Check all filesystems
+checkroot.sh            Check the root file system
+chrony			Chrony NTP time daemon
+console-screen.sh	Boot script for console-tools
+cron			Daemon to execute scheduled commands
+devfsd			Don't mess with this
+devpts.sh		Don't mess with this
+dhcp3-server		DHCP server daemon
+dns-clean		Pppconfig dns cleanup
+dnsmasq			Caching DNS forwarder
+etc-setserial		Serial device configuration
+exim			Mail transport agent daemon
+gpm			Mouse interface daemon
+halt			Don't mess with this
+hostname.sh		Set hostname
+hwclock.sh		Set and adjust the CMOS clock
+hwclockfirst.sh		Set system clock to hardware clock
+ifupdown		Network interface configuration
+inetd			Network "super-server" daemon
+iptables		Load/unload iptables (firewall stuff)
+keymap.sh		Load keymaps
+klogd			Kernel logging daemon
+lpd			Printer spooler daemon
+makedev			Don't mess with this
+modutils		Load modules at boot
+mountall.sh		Mount all file systems
+mountnfs.sh		Mount NFS file systems
+nethack                 Nethack file recovery script
+networking              Manage network interfaces and configure options
+nscd                    NSCD name service cache daemon 
+nviboot                 Script to recover nvi edit sessions
+pdnsd                   Proxy DNS server daemon
+postgresql              Postgresql database server daemon
+ppp                     Start or stop PPP daemon
+pppd-dns                Clean up /etc/resolv.conf after pppd
+pppstatus               Pppstatus daemon
+pppstatus-clean         Clean up after pppstatus
+privoxy                 Privacy enhancing HTTP Proxy daemon
+procps.sh               Don't mess with this
+quota                   Enable/disable filesystem quotas
+quotarpc                Quota daemon
+reboot			Don't mess with this
+rmnologin               Don't mess with this
+sendsigs                Don't mess with this
+setmixer                Initialize sound mixer settings
+setserial               Initialize serial ports
+single                  Don't mess with this
+spamassassin            Spamd spam filter daemon
+ssh                     Secure shell daemon
+sudo                    Clear privileges
+sysklogd                System log daemon
+umountfs                Unmount file systems
+umountnfs.sh            Unmount network file systems
+urandom                 Don't mess with this
+xfree86-common          Set up the X server socket directory
+xfs                     X font server daemon
+xdm                     X display manager daemon
+gdm                     Gnome display manager daemon for X
+kdm                     KDE display manager daemon for X
+

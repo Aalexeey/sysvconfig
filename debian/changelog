@@ -1,0 +1,113 @@
+sysvconfig (0.82-1+devuan) stable; urgency=low
+
+  * Rebuild for Devuan
+  * Add Russian menu basic translation.
+  * Deleted /usr/sbin/service.
+  * Add init-system-helpers - /usr/sbin/service dependency. 
+
+ -- Aalexeey <https://debianforum.ru>  Fri, 06 Jan 2023 13:07:05 +0300
+
+sysvconfig (0.81) unstable; urgency=low
+
+  * Applied patch from Manuel Prinz <debian@pinguinkiste.de>.
+    Closes: #486058 sysvconfig: bashism in /bin/sh script
+
+ -- John Hasler <jhasler@debian.org>  Tue, 15 Jul 2008 21:49:17 -0500
+
+sysvconfig (0.80) unstable; urgency=low
+
+  * Applied patch from Andrew Pollock <apollock@debian.org> to add Argus
+    to guide.
+    Closes: #323712 sysvconfig: Please add daemon description for Argus
+
+  * Replaced "X" with "*".
+    Closes: #389888 sysvconfig: not X's
+ -- John Hasler <jhasler@debian.org>  Sun, 20 Apr 2008 08:16:02 -0500
+
+sysvconfig (0.70) unstable; urgency=high
+
+  * Fixed version number in source and man page.
+
+  * Deleted README.debian and BETA note from man page.
+    Closes: #288317: sysvconfig: Why in testing if this is beta version
+  
+  * /usr/share/doc/sysvconfig contains a copy of the GPL because the GPL 
+    and the author of the program require it.
+    Closes: #381991: /usr/share/doc/sysvconfig contains COPYING.gz (GPL)
+  
+  * New version to replace screwed-up 0.60.2 version
+    Closes: #396031: sysvconfig: Erroneous Upload
+    Closes: #395560: sysvconfig: /usr/sbin/service disappeared without notice
+  
+ -- John Hasler <jhasler@debian.org>  Wed,  1 Nov 2006 20:14:47 -0600
+
+sysvconfig (0.10) unstable; urgency=high
+
+  * Made the service --status-all option a no-op.  Can't rely on
+    scripts not to do the wrong thing when called with an argument 
+    they don't understand. 
+    Closes: #264771: 'service --status-all' shutdowns the computer.
+
+ -- John Hasler <jhasler@debian.org>  Tue, 10 Aug 2004 10:33:36 -0500
+
+sysvconfig (0.9) unstable; urgency=low
+
+  * Fixed bug that caused creation of bad symlinks in /etc/rc*.
+    Closes: #251535: symlink creation errors
+
+ -- John Hasler <jhasler@debian.org>  Sat, 29 May 2004 21:57:55 -0500
+
+sysvconfig (0.8) unstable; urgency=low
+
+  * Fixed rules so that service script actually gets included in deb.
+    Closes: #244347: service command isn't included in debian package
+
+ -- John Hasler <john@dhh.gt.org>  Fri, 21 May 2004 07:57:46 -0500
+
+sysvconfig (0.7) unstable; urgency=low
+
+  * More guidefile entries.
+  
+  * Added service script.
+    Closes: #244347: command "service" to execute /etc/init.d/* scripts
+  
+  * Added command-line enable/disable options.
+  
+  * Re-wrote option code.
+  
+  * Fixed bug that caused finish() and restore() to create 
+    defective symlinks when the directory arg to debug
+    was a relative path.
+  
+  * Added -h and -v options.
+  
+  * Fixed setlocale bug by replacing LC_MESSAGES with $ENV{LC_MESSAGES}.
+    Closes: #241660: Error messages
+
+ -- John Hasler <jhasler@@debian.org>  Thu, 29 Apr 2004 21:17:33 -0500
+
+sysvconfig (0.6.1) unstable; urgency=low
+
+  * Upload to Unstable
+  
+ -- John Hasler <jhasler@debian.org>  Fri, 16 Apr 2004 07:40:00 -0500
+
+sysvconfig (0.6) experimental; urgency=low
+
+  * Eliminated use of update-rc.d.  It just isn't flexible enough.
+    Closes: #241695: sysvconfig: deleted all my S* links
+
+  * Re-wrote finish() and restore() so that only changed links get 
+    touched.
+  
+  * Fixed bug in handling of blank entries in edit(), added entry validation.
+  
+  * Added "Are you sure?" screen to restore().
+  
+ -- John Hasler <jhasler@debian.org>  Fri, 9 Apr 2004 12:00:00 -0500
+  
+sysvconfig (0.5) experimental; urgency=low
+
+  * Initial Release
+
+ -- John Hasler <john@dhh.gt.org>  Thu, 18 Mar 2004 18:00:00 -0600

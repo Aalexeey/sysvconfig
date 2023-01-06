@@ -1,0 +1,10 @@
+#!/bin/sh
+# $Id: prerm,v 1.1.1.1 2004/04/20 21:25:08 john Exp $
+
+# John G. Hasler <john@dhh.gt.org> 2004
+# Any possessor of a copy of this program may treat it as if it
+# were in the public domain.  I waive all rights.
+set -e
+if [ \( "$1" = "upgrade" -o "$1" = "remove" \) -a -L /usr/doc/sysvconfig ]; then
+	rm -f /usr/doc/sysvconfig
+fi

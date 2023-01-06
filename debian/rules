@@ -1,0 +1,69 @@
+#!/usr/bin/make -f
+# $Id: rules,v 1.3 2004/05/21 16:04:08 john Exp $
+
+# Made with the aid of dh_make, by Craig Small
+# Sample debian/rules that uses debhelper. GNU copyright 1997 by Joey Hess.
+# Some lines taken from debmake, by Cristoph Lameter.
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+build: build-stamp
+build-stamp:
+	dh_testdir
+
+	# Add here commands to compile the package.
+	#$(MAKE) 
+
+	touch build-stamp
+
+clean:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp install-stamp
+
+	# Add here commands to clean up after the build process.
+	#-$(MAKE) clean
+
+	dh_clean
+
+install: install-stamp
+install-stamp: build-stamp
+	dh_testdir
+	dh_testroot
+	dh_clean -k
+	dh_installdirs
+
+	# Add here commands to install the package.
+	#$(MAKE) install DESTDIR=`pwd`/debian/sysvconfig
+	install -g root -o root -m 700 sysvconfig `pwd`/debian/sysvconfig/usr/sbin
+	touch install-stamp
+
+
+# Build architecture-independent files here.
+binary-indep: build install
+# We have nothing to do by default.
+	dh_testdir
+	dh_testroot
+	dh_installdocs
+	dh_installexamples
+	dh_installmenu --noscripts
+	dh_installcron --noscripts
+	dh_installman sysvconfig.8
+	dh_installchangelogs
+	cp guide debian/sysvconfig/usr/share/sysvconfig/
+	dh_compress
+	dh_fixperms
+	chmod 644 debian/sysvconfig/usr/share/sysvconfig/guide
+	dh_installdeb
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+# Build architecture-dependent files here.
+binary-arch: build install
+
+source diff:                                                                  
+	@echo >&2 'source and diff are obsolete - use dpkg-source -b'; false
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary
